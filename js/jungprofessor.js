@@ -115,6 +115,11 @@ function goRoom(roomName) {
     return;
   }
 
+  // ← 발소리 goRoom 안으로 이동
+  const footstep = new Audio('../sound/footstep.wav');
+  footstep.volume = 0.8;
+  footstep.play().catch(()=>{});
+
   t.textContent = `📍 ${roomName} 으로 이동합니다…`;
   t.classList.add("show");
 
@@ -122,13 +127,8 @@ function goRoom(roomName) {
   tt = setTimeout(() => {
     t.classList.remove("show");
     window.location.href = targetPath;
-  }, 800);
+  }, 1500); // ← 800에서 1500으로 변경
 }
-
-  // ── 발소리 재생 ──
-  const snd = new Audio('sound/footstep.mp3');
-  snd.volume = 0.8;
-  snd.play().catch(()=>{});
 
 /* ── 탈출 팝업 ── */
 function openEsc(){
@@ -167,9 +167,9 @@ document.addEventListener('keydown',e=>{
 
 let audioCtx = null;
 
-document.addEventListener('click', () => {
+document.addEventListener('click', (e) => {
   if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  
+  if (e.target.closest('.mroom')) return; // ← 맵 이동 버튼은 스킵
   const snd = new Audio('../sound/click.mp3');
   snd.volume = 0.5;
   snd.play().catch(()=>{});
