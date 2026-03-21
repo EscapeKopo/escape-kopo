@@ -14,13 +14,13 @@ const ITEMS = {
   plant:{
     t:'e', icon:'🪨', inv:'🪨',
     name:'교수님의 애완돌',
-    desc:'매끄럽고 동그란 돌멩이.\n교수님이 화분 옆에 소중히 올려두었다.\n뒷면에 작게 "행운을 빌어" 라고 새겨져 있다.'
+    desc:'교수님이 화분 옆에 소중히 올려두었다.\n뒷면에 주황색 낙서들이 있다.\n교수님이 주황색을 좋아하시나??'
   },
   note:{
-    t:'e', icon:'📝', inv:'📝',
-    name:'숫자가 적힌 쪽지',
-    desc:'키보드 밑에 끼워진 작은 메모지.\n\n「  0  」\n\n이 숫자가 비밀번호의 단서일까…'
-  },
+  t:'e', icon:'📝', inv:'📝',
+  name:'숫자가 적힌 쪽지',
+  desc:'키보드 밑에 끼워진 작은 메모지.\n\n「  <span style="color:#ff8c00; font-size:28px; font-weight:900;">0</span>  」\n\n이 숫자가 비밀번호의 단서일까…'
+},
   necklace:{
     t:'i', icon:'../images/pro2.jpg', inv:'../images/pro2.jpg',
     name:'교수증',
@@ -36,7 +36,7 @@ function showPopup(id, viewOnly){
   const d=ITEMS[id];
   document.getElementById('p-icon').innerHTML = d.t==='i'?`<img src="${d.icon}" alt="${d.name}">`:d.icon;
   document.getElementById('p-title').textContent=d.name;
-  document.getElementById('p-desc').textContent=d.desc;
+ document.getElementById('p-desc').innerHTML=d.desc;
   const popup=document.getElementById('popup');
   if(viewOnly){
     popup.classList.add('view-mode');
