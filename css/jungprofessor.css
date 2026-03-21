@@ -365,6 +365,19 @@ html, body {
   border-color:#ffa408;
   box-shadow:0 0 0 3px rgba(200,147,58,.25);
 }
+
+/*탈출코드 색 변경*/
+#p0 { border-color: #ff8c00; color: #ff8c00; }
+#p1 { border-color: #9b59b6; color: #9b59b6; }
+#p2 { border-color: #ff69b4; color: #ff69b4; }
+#p3 { border-color: #ffd700; color: #ffd700; }
+
+#p0:focus { border-color: #ff8c00; box-shadow: 0 0 0 3px rgba(255,140,0,0.25); }
+#p1:focus { border-color: #9b59b6; box-shadow: 0 0 0 3px rgba(155,89,182,0.25); }
+#p2:focus { border-color: #ff69b4; box-shadow: 0 0 0 3px rgba(255,105,180,0.25); }
+#p3:focus { border-color: #ffd700; box-shadow: 0 0 0 3px rgba(255,215,0,0.25); }
+
+/*-------------*/
 #pw-msg {
   color:#ff4422; font-size:16px; font-weight:600;
   height:26px; margin-bottom:26px;
