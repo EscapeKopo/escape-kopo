@@ -129,7 +129,7 @@ function triggerFireEvent() {
   if (popupFire) popupFire.classList.add("show");
 
   setTimeout(() => {
-    window.location.href = "./index.html";
+    window.location.href = "./mainscreen.html";
   }, 3000);
 }
 
