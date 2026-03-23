@@ -24,21 +24,21 @@
         <!-- 책꽂이 -->
         <div
           class="hotspot"
-          style="left: 9%; top: 0%; width: 4.56%; height: 100%;"
+          style="left: 2%; top: 0%; width: 4.56%; height: 100%;"
           onclick="gobook()"
         ></div>
 
         <!-- 메모지 -->
         <div
           class="hotspot"
-          style="left: 76.57%; top: 50.28%; width: 7.16%; height: 9.37%;"
+          style="left: 60%; top: 55%; width: 7.16%; height: 9.37%;"
           onclick="openItem('memo')"
         ></div>
 
         <!-- 책상 -->
         <div
           class="hotspot"
-          style="left: 65.43%; top: 34.14%; width: 33%; height: 16.41%;"
+          style="left: 50%; top: 34.14%; width: 33%; height: 16.41%;"
           onclick="goDesk()"
         ></div>
 
@@ -52,7 +52,7 @@
 
         <!-- MAP : 다시 이미지 안 -->
         <div id="hud-topright">
-          <button id="map-toggle" onclick="toggleMap()">🗺 MAP</button>
+          <button id="map-toggle" onclick="toggleMap(event)">🗺 MAP</button>
           <div id="map-panel">
             <h3>🗺 MAP — 이동하기</h3>
 
@@ -68,8 +68,8 @@
               <div class="mdot"></div>정원치 교수님 연구실<span class="mtag">→</span>
             </div>
 
-            <div class="mroom" onclick="goRoom('휴게실')">
-              <div class="mdot"></div>휴게실<span class="mtag">→</span>
+            <div class="mroom" onclick="goRoom('라운지')">
+              <div class="mdot"></div>라운지<span class="mtag">→</span>
             </div>
 
             <div class="mroom" onclick="goRoom('서버실')">
